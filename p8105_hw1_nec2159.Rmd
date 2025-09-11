@@ -10,3 +10,4 @@ library(moderndive)
 data("early_january_weather")
 ```
 
+The variables in this data set include `r names(early_january_weather)`.
