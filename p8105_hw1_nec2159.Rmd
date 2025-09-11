@@ -54,3 +54,15 @@ mean(vec_factor)
 
 I am able to take the mean of the random sample variable since this is a numeric variable in addition to the "greater than 0" variable since this is a logical variable. The other two variables are categorical, so I cannot take their means.
 
+```{r echo = T, results = 'hide'}
+greater_0_numeric <- as.numeric(greater_0)
+greater_0_numeric
+
+vec_char_numeric <- as.numeric(vec_char)
+vec_char_numeric
+
+vec_factor_numeric <- as.numeric(vec_factor)
+vec_factor_numeric
+```
+The logical and factor variables get converted to numbers. This makes sense as these variables have a limited number of possible responses. For example, the factor variable responses of "good," "alright," and "bad," can easily be assigned number values, as can "True or "False" for the logical variable. This would not make sense to do with the character variables as there are an unlimited number of possible responses. This explains why I was not able to take the mean of the character variable or factor variable. However, I was able to take the mean of the logical greater than 0 variable as they had already been assigned either "1" or "0" based on whether they were "True" or "False.
+
