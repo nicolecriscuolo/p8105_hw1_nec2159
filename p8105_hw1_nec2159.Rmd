@@ -10,4 +10,13 @@ library(moderndive)
 data("early_january_weather")
 ```
 
-The variables in this data set include `r names(early_january_weather)`. The average temperature recorded is `r mean(early_january_weather$temp)`. The highest and lowest temperatures recorded were `r max(early_january_weather$temp)` and `r min(early_january_weather$temp)`. The average humidity and wind speed were `r mean(early_january_weather$humid)` and `r mean(early_january_weather$wind_speed)`, respectively.
+The variables in this data set include `r names(early_january_weather)`. The highest and lowest temperatures recorded were `r max(early_january_weather$temp)` and `r min(early_january_weather$temp)`. The average humidity and wind speed were `r mean(early_january_weather$humid)` and `r mean(early_january_weather$wind_speed)`, respectively. 
+
+All the values for temperature are `r early_january_weather$temp`. 
+
+All the values for humidity are `r early_january_weather$humid`.
+
+The number of observations in the data set is `r nrow(early_january_weather)`, and the number of variables is `r ncol(early_january_weather)`. 
+
+The average temperature recorded is `r mean(early_january_weather$temp)`.
+
