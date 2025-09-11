@@ -27,3 +27,30 @@ temp_plot <- ggplot(early_january_weather, aes (x = time_hour, y = temp, color =
 temp_plot
 ```
 The plot's peaks and valleys show how temperature was changing throughout the hours of each day. The gradual increase from January 1st to January 14 show that the average temperature throughout the day was increasing each day for these two weeks. After January 14, there was a large drop in temperature. The humidity seemed to increase with temperature for the most part as there was the most humidity around January 13 and 14 and the least around January 3.
+
+## Problem 2
+
+```{r}
+example_df = 
+  tibble(
+    random_samp = rnorm(10),
+    greater_0 = random_samp > 0,
+    vec_char = c("My", "name", "is", "Nicole", "and", "I", "go", "to", "Columbia", "University"),
+    vec_factor = factor(c("good", "good", "good", "alright", "alright", "alright", "alright", "bad", "bad", "bad"))
+)
+
+random_samp <- example_df %>% pull(random_samp)
+mean(random_samp)
+
+greater_0 <- example_df %>% pull(greater_0)
+mean(greater_0)
+
+vec_char <- example_df %>% pull(vec_char)
+mean(vec_char)
+
+vec_factor <- example_df %>% pull(vec_factor)
+mean(vec_factor)
+```
+
+I am able to take the mean of the random sample variable since this is a numeric variable in addition to the "greater than 0" variable since this is a logical variable. The other two variables are categorical, so I cannot take their means.
+
