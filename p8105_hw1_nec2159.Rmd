@@ -6,7 +6,7 @@ output: github_document
 ---
 
 ## Problem 1
-```{r}
+```{r echo = FALSE, message = FALSE}
 library(tidyverse)
 library(moderndive)
 data("early_january_weather")
@@ -54,7 +54,7 @@ mean(vec_factor)
 
 I am able to take the mean of the random sample variable since this is a numeric variable in addition to the "greater than 0" variable since this is a logical variable. The other two variables are categorical, so I cannot take their means.
 
-```{r echo = T, results = 'hide'}
+```{r eval = FALSE}
 greater_0_numeric <- as.numeric(greater_0)
 greater_0_numeric
 
