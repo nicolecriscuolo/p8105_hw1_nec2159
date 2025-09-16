@@ -14,11 +14,11 @@ data("early_january_weather")
 
 The variables in this data set include `r names(early_january_weather)`. The highest and lowest temperatures recorded were `r max(early_january_weather$temp)` and `r min(early_january_weather$temp)`. The average humidity and wind speed were `r mean(early_january_weather$humid)` and `r mean(early_january_weather$wind_speed)`, respectively. 
 
-All the values for temperature are `r early_january_weather$temp`. 
+All the values for temperature are `r unique(early_january_weather$temp)`. 
 
-All the values for humidity are `r early_january_weather$humid`.
+All the values for wind speed are `r unique(early_january_weather$wind_speed)`.
 
-The number of observations in the data set is `r nrow(early_january_weather)`, and the number of variables is `r ncol(early_january_weather)`. 
+The number of subjects in the data set is `r nrow(early_january_weather)`, and the number of variables is `r ncol(early_january_weather)`. 
 
 The average temperature recorded is `r mean(early_january_weather$temp)`.
 
@@ -64,5 +64,5 @@ vec_char_numeric
 vec_factor_numeric <- as.numeric(vec_factor)
 vec_factor_numeric
 ```
-The logical and factor variables get converted to numbers. This makes sense as these variables have a limited number of possible responses. For example, the factor variable responses of "good," "alright," and "bad," can easily be assigned number values, as can "True or "False" for the logical variable. This would not make sense to do with the character variables as there are an unlimited number of possible responses. This explains why I was not able to take the mean of the character variable or factor variable. However, I was able to take the mean of the logical greater than 0 variable as they had already been assigned either "1" or "0" based on whether they were "True" or "False.
+The logical and factor variables get converted to numbers. This makes sense as these variables have a limited number of possible responses. For example, the factor variable responses of "good," "alright," and "bad," can easily be assigned number values, as can "True" or "False" for the logical variable. This would not make sense to do with the character variables as there are an unlimited number of possible responses. This explains why I was not able to take the mean of the character variable or factor variable. However, I was able to take the mean of the logical greater than 0 variable as they had already been assigned either "1" or "0" based on whether they were "True" or "False.
 
